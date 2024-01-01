@@ -5,6 +5,6 @@
     "description": "Replaces specified suits, example project for ModelReplacementAPI",
     "dependencies": [
         "BepInEx-BepInExPack-5.4.2100",
-		"BunyaPineTree-ModelReplacementAPI-2.3.0"		
+	"BunyaPineTree-ModelReplacementAPI-2.3.0"		
     ]
 }
