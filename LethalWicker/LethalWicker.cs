@@ -9,7 +9,6 @@ namespace LethalWicker
         //Required universally
         protected override GameObject LoadAssetsAndReturnModel()
         {
-            //Replace with the Asset Name from your unity project 
             string model_name = "LehtalWickerPrefab";
             return Assets.MainAssetBundle.LoadAsset<GameObject>(model_name);
         }
@@ -27,25 +26,23 @@ namespace LethalWicker
             replacementModel.GetComponentInChildren<SkinnedMeshRenderer>().SetBlendShapeWeight(25, 0);
             replacementModel.GetComponentInChildren<SkinnedMeshRenderer>().SetBlendShapeWeight(45, 0);
 
-
+			// To be configured
+			/*
             if (emoteId == 1) {
-               
-
                 replacementModel.GetComponentInChildren<SkinnedMeshRenderer>().SetBlendShapeWeight(83, 100);
                 replacementModel.GetComponentInChildren<SkinnedMeshRenderer>().SetBlendShapeWeight(84, 100);
                 replacementModel.GetComponentInChildren<SkinnedMeshRenderer>().SetBlendShapeWeight(25, 60);
                 replacementModel.GetComponentInChildren<SkinnedMeshRenderer>().SetBlendShapeWeight(45, 100);
             }
+            
             if(emoteId == 2)
             {
-               
-
                 replacementModel.GetComponentInChildren<SkinnedMeshRenderer>().SetBlendShapeWeight(29, 100);
                 replacementModel.GetComponentInChildren<SkinnedMeshRenderer>().SetBlendShapeWeight(44, 100);
                 replacementModel.GetComponentInChildren<SkinnedMeshRenderer>().SetBlendShapeWeight(49, 100);
                 replacementModel.GetComponentInChildren<SkinnedMeshRenderer>().SetBlendShapeWeight(58, 100);
                 replacementModel.GetComponentInChildren<SkinnedMeshRenderer>().SetBlendShapeWeight(60, 70);
-            }
+            }*/
             
         }
 
