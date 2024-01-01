@@ -42,7 +42,6 @@ namespace LethalWicker
                 replacementModel.GetComponentInChildren<SkinnedMeshRenderer>().SetBlendShapeWeight(58, 100);
                 replacementModel.GetComponentInChildren<SkinnedMeshRenderer>().SetBlendShapeWeight(60, 70);
             }*/
-            
         }
 
         protected override void OnEmoteEnd()
