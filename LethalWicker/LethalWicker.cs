@@ -1,7 +1,7 @@
-﻿using ModelReplacement;
+using ModelReplacement;
 using UnityEngine;
 
-namespace HatsuneMikuModelReplacement
+namespace LethalWicker
 {
     public class LethalWicker : BodyReplacementBase
     {
