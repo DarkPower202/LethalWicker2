@@ -5,7 +5,6 @@ namespace LethalWicker
 {
     public class LethalWicker : BodyReplacementBase
     {
-        
         //Required universally
         protected override GameObject LoadAssetsAndReturnModel()
         {
@@ -26,8 +25,8 @@ namespace LethalWicker
             replacementModel.GetComponentInChildren<SkinnedMeshRenderer>().SetBlendShapeWeight(25, 0);
             replacementModel.GetComponentInChildren<SkinnedMeshRenderer>().SetBlendShapeWeight(45, 0);
 
-			// To be configured
-			/*
+            // To be configured
+            /*
             if (emoteId == 1) {
                 replacementModel.GetComponentInChildren<SkinnedMeshRenderer>().SetBlendShapeWeight(83, 100);
                 replacementModel.GetComponentInChildren<SkinnedMeshRenderer>().SetBlendShapeWeight(84, 100);
