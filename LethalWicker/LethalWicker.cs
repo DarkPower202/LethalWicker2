@@ -5,7 +5,7 @@ namespace LethalWicker
 {
     public class LethalWicker : BodyReplacementBase
     {
-        //Required universally
+        // Required universally
         protected override GameObject LoadAssetsAndReturnModel()
         {
             string model_name = "LehtalWickerPrefab";
