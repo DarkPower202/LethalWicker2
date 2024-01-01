@@ -14,7 +14,7 @@
 - Set your preferred replacement suits in the config, or enable it for all suits.
 
 ## Known Issues
-- To be found.
+- Floating default player head model shadow.
 
 ## Note
 May be buggy.
