@@ -51,12 +51,10 @@ namespace LethalWicker
             if (enableWickerForAllSuits.Value)
             {
                 ModelReplacementAPI.RegisterModelReplacementOverride(typeof(LethalWicker));
-
             }
             if (enableWickerAsDefault.Value)
             {
                 ModelReplacementAPI.RegisterModelReplacementDefault(typeof(LethalWicker));
-
             }
 
             var commaSepList = suitNamesToEnableWicker.Value.Split(',');
@@ -64,7 +62,6 @@ namespace LethalWicker
             {
                 ModelReplacementAPI.RegisterSuitModelReplacement(item, typeof(LethalWicker));
             }
-                
 
             Harmony harmony = new Harmony("Froze.LethalWicker");
             harmony.PatchAll();
