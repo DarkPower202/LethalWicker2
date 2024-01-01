@@ -7,7 +7,7 @@ using BepInEx.Configuration;
 using System;
 
 //using System.Numerics;
-namespace HatsuneMikuModelReplacement
+namespace LethalWicker
 {
 
     [BepInPlugin("Froze.LethalWicker", "Lethal Wickerbeast", "1.0.0")]
