@@ -9,7 +9,6 @@ using System;
 //using System.Numerics;
 namespace LethalWicker
 {
-
     [BepInPlugin("Froze.LethalWicker", "LethalWicker", "1.0.0")]
     [BepInDependency("meow.ModelReplacementAPI", BepInDependency.DependencyFlags.HardDependency)]
     public class Plugin : BaseUnityPlugin
