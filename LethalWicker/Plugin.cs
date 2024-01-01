@@ -1,4 +1,4 @@
-﻿using BepInEx;
+using BepInEx;
 using HarmonyLib;
 using UnityEngine;
 using System.Reflection;
@@ -7,10 +7,9 @@ using BepInEx.Configuration;
 using System;
 
 //using System.Numerics;
-namespace HatsuneMikuModelReplacement
+namespace LethalWicker
 {
-
-    [BepInPlugin("Froze.LethalWicker", "Lethal Wickerbeast", "1.0.0")]
+    [BepInPlugin("Froze.LethalWicker", "LethalWicker", "1.0.0")]
     [BepInDependency("meow.ModelReplacementAPI", BepInDependency.DependencyFlags.HardDependency)]
     public class Plugin : BaseUnityPlugin
     {
@@ -22,20 +21,24 @@ namespace HatsuneMikuModelReplacement
         public static ConfigEntry<string> suitNamesToEnableWicker { get; private set; }
 
         // Wicker model specific config options
+        /*
         public static ConfigEntry<float> UpdateRate { get; private set; }
         public static ConfigEntry<float> distanceDisablePhysics { get; private set; }
         public static ConfigEntry<bool> disablePhysicsAtRange { get; private set; }
+        */
 
         private static void InitConfig()
         {
             enableWickerForAllSuits = config.Bind<bool>("Suits to Replace Settings", "Enable LethalWicker for all Suits", false, "Enable to replace every suit with LethalWicker. Set to false to specify suits");
             enableWickerAsDefault = config.Bind<bool>("Suits to Replace Settings", "Enable LethalWicker as default", false, "Enable to replace every suit that hasn't been otherwise registered with LethalWicker.");
-            suitNamesToEnableWicker = config.Bind<string>("Suits to Replace Settings", "Suits to enable LethalWicker for", "Red suit", "Enter a comma separated list of suit names. (Additionally, [Green suit, Pajama suit, Hazard suit] etc)");
+            suitNamesToEnableWicker = config.Bind<string>("Suits to Replace Settings", "Suits to enable LethalWicker for", "Orange suit", "Enter a comma separated list of suit names. (Additionally, [Green suit, Pajama suit, Hazard suit] etc)");
 
+            // Dynamic bones support soon
+            /*
             UpdateRate = config.Bind<float>("Dynamic Bone Settings", "Update rate", 60, "Refreshes dynamic bones more times per second the higher the number");
             disablePhysicsAtRange = config.Bind<bool>("Dynamic Bone Settings", "Disable physics at range", false, "Enable to disable physics past the specified range");
             distanceDisablePhysics = config.Bind<float>("Dynamic Bone Settings", "Distance to disable physics", 20, "If Disable physics at range is enabled, this is the range after which physics is disabled.");
-            
+            */
         }
         private void Awake()
         {
@@ -47,12 +50,10 @@ namespace HatsuneMikuModelReplacement
             if (enableWickerForAllSuits.Value)
             {
                 ModelReplacementAPI.RegisterModelReplacementOverride(typeof(LethalWicker));
-
             }
             if (enableWickerAsDefault.Value)
             {
                 ModelReplacementAPI.RegisterModelReplacementDefault(typeof(LethalWicker));
-
             }
 
             var commaSepList = suitNamesToEnableWicker.Value.Split(',');
@@ -60,7 +61,6 @@ namespace HatsuneMikuModelReplacement
             {
                 ModelReplacementAPI.RegisterSuitModelReplacement(item, typeof(LethalWicker));
             }
-                
 
             Harmony harmony = new Harmony("Froze.LethalWicker");
             harmony.PatchAll();
@@ -69,7 +69,6 @@ namespace HatsuneMikuModelReplacement
     }
     public static class Assets
     {
-        // Replace mbundle with the Asset Bundle Name from your unity project 
         public static string mainAssetBundleName = "LethalWicker";
         public static AssetBundle MainAssetBundle = null;
 
