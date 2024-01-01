@@ -22,3 +22,5 @@ May be buggy.
 ## Changelog
 	- v1.0.0
 		- Initial release.
+	- v1.0.1
+		- Minor changes.
