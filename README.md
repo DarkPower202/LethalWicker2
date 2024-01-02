@@ -3,7 +3,7 @@
 
 ## Instructions
 - Requires [ModelReplacementAPI.](https://github.com/BunyaPineTree/LethalCompany_ModelReplacementAPI)
-- Build your own Wickerbeast asset bundle through Unity. [Steps here.](https://github.com/BunyaPineTree/LethalCompany_ModelReplacementAPI/wiki/Using-the-Unity-Workflow)
+- Build your own Wickerbeast asset bundle through Unity. [Guide here.](https://github.com/BunyaPineTree/LethalCompany_ModelReplacementAPI/wiki/Using-the-Unity-Workflow)
 - Ensure that the Asset Bundle Name is "LethalWicker".
 - Ensure that the Asset Name is "LethalWickerPrefab".
 - Package for Visual Studio.
@@ -14,11 +14,16 @@
 - Set your preferred replacement suits in the config, or enable it for all suits.
 
 ## Known Issues
-- To be found.
+- Floating default player head model shadow.
 
 ## Note
 May be buggy.
 
+## Credits
+Jin A - Model Author
+
 ## Changelog
 	- v1.0.0
 		- Initial release.
+	- v1.0.1 - v1.0.3
+		- Minor changes.
